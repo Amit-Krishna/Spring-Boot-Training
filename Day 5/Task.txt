@@ -1,0 +1,18 @@
+TASK (H2 database)
+ 
+1) create 2)Display 3)Raise salary 4)Exit
+-----------------------------------------------------------------------------
+press 1->
+
+1- Enter your name 
+2- Enter your Age
+3- Enter your designation (programmer 25k , manager 30k ,tester 20k)
+2- Enter Your Salary
+-----------------------------------------------------------------------------
+then ask Y/N yes to continue and no to close (again /create another account)
+----------------------------------------------------------------------------- 
+no takes you to: 1) create 2)Display 3)Raise salary 4)Exit
+-----------------------------------------------------------------------------
+press 2->
+
+Displaye name age designation and salary
