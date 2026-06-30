@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Users</title>
+</head>
+<body>
+
+<h2>All Users</h2>
+
+<table border="1">
+
+<tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Designation</th>
+    <th>Salary</th>
+</tr>
+
+<tr th:each="u : ${users}">
+    <td th:text="${u.id}"></td>
+    <td th:text="${u.name}"></td>
+    <td th:text="${u.designation}"></td>
+    <td th:text="${u.salary}"></td>
+</tr>
+
+</table>
+
+<br>
+
+<form action="/Main" method="get">
+    <button type="submit">Back</button>
+</form>
+
+</body>
+</html>

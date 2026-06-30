@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add User</title>
+</head>
+<body>
+
+<h2>Create User</h2>
+
+<form action="/addUser" method="post">
+
+    Name:
+    <input type="text" name="name"><br><br>
+
+    Designation:
+    <select name="designation">
+        <option value="programmer">Programmer</option>
+        <option value="manager">Manager</option>
+        <option value="tester">Tester</option>
+    </select><br><br>
+
+    Add More Users?:
+    <input type="checkbox" name="bool"><br><br>
+
+    <button type="submit">Save</button>
+
+</form>
+
+<br>
+
+<form action="/Main" method="get">
+    <button type="submit">Back</button>
+</form>
+
+</body>
+</html>
