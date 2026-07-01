@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>School Portal</title>
+    <style>
+        /* CSS to match the drawn layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures the page takes up the full screen height */
+        }
+
+        /* HEADER STYLING */
+        header {
+            display: flex;
+            justify-content: space-between; /* Pushes the 3 sections apart */
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 2px solid black; /* Line under the header */
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-left .links-text {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column; /* Stacks links vertically like the drawing */
+            gap: 5px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #0056b3;
+            border-bottom: 1px solid #0056b3; /* Mimics the dashes in the drawing */
+            padding-bottom: 2px;
+        }
+
+        .header-center h2 {
+            margin: 0;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .header-right .image-placeholder {
+            width: 80px;
+            height: 80px;
+            border: 2px dashed #999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+        }
+
+        /* MAIN BODY STYLING */
+        main {
+            flex-grow: 1; /* Pushes the footer to the bottom */
+            display: flex;
+            justify-content: center; /* Centers the box horizontally */
+            align-items: center;     /* Centers the box vertically */
+            padding: 40px;
+        }
+
+        .content-box {
+            border: 2px solid black; /* The drawn box in the middle */
+            padding: 40px;
+            width: 50%;
+            min-height: 250px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .student-details {
+            text-align: left;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        /* FOOTER STYLING */
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid black; /* Line above the footer */
+            font-size: 1.5rem;
+            font-family: 'cursive', sans-serif; /* Matches the handwritten feel */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP SECTION: HEADER -->
+    <header>
+        <!-- Left: Links -->
+        <div class="header-left">
+            <span class="links-text">Links &rarr;</span>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/contact">Contact</a>
+                <a href="/about">About</a>
+                <a href="/student">Student details</a>
+            </div>
+        </div>
+
+        <!-- Center: Title -->
+        <div class="header-center">
+            <h2>School Portal</h2>
+        </div>
+
+        <!-- Right: Images -->
+        <div class="header-right">
+            <div class="image-placeholder">images</div>
+        </div>
+    </header>
+
+    <!-- MIDDLE SECTION: CONTENT BOX -->
+    <main>
+        <div class="content-box">
+            <!-- Dynamic Page Title -->
+            <h3 th:text="${title}"></h3>
+            
+            <!-- Dynamic Message (Only shows if message is passed from controller) -->
+            <p th:if="${message != null}" th:text="${message}"></p>
+
+            <!-- Student Details (Only shows if 'name' is passed from controller) -->
+            <div class="student-details" th:if="${name != null}">
+                <p><strong>Name:</strong> <span th:text="${name}"></span></p>
+                <p><strong>Course:</strong> <span th:text="${course}"></span></p>
+                <p><strong>Semester:</strong> <span th:text="${semester}"></span></p>
+                <p><strong>College:</strong> <span th:text="${college}"></span></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- BOTTOM SECTION: FOOTER -->
+    <footer>
+        Thank You
+    </footer>
+
+</body>
+</html>
