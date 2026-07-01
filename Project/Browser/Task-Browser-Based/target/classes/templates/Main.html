@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Main Page</title>
+</head>
+<body>
+
+<h2>Employee Management</h2>
+
+<form action="/addUser" method="get">
+    <button type="submit">Create User</button>
+</form>
+<br>
+
+<form action="/getUsers" method="get">
+    <button type="submit">Display Users</button>
+</form>
+<br>
+
+<form action="/raiseSalary" method="get">
+    <button type="submit">Raise Salary</button>
+</form>
+<br>
+
+<form action="/exit" method="get">
+    <button type="submit">Exit</button>
+</form>
+
+<p style="color:red;" th:text="${error}"></p>
+<p style="color:green;" th:text="${success}"></p>
+
+</body>
+</html>

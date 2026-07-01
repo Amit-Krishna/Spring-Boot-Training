@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Raise Salary</title>
+</head>
+<body>
+
+<h2>Raise Salary</h2>
+
+<form action="/raiseSalary" method="post">
+
+    <label>Employee ID:</label>
+    <input type="number" name="id" required>
+    <br><br>
+
+    <label>Raise Percentage:</label>
+    <input type="number" name="raisePercent" min="1" required>
+    <br><br>
+
+    <button type="submit">Raise Salary</button>
+
+</form>
+
+<br>
+
+<p style="color:red;" th:text="${error}"></p>
+<p style="color:green;" th:text="${success}"></p>
+
+<br>
+
+<form action="/Main" method="get">
+    <button type="submit">Back</button>
+</form>
+
+</body>
+</html>

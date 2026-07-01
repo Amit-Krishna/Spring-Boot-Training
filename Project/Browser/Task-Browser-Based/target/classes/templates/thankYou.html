@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Thank You</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #74ebd5, #ACB6E5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .card {
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        text-align: center;
+        width: 400px;
+    }
+
+    .check {
+        font-size: 70px;
+        color: green;
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: #666;
+        margin-bottom: 30px;
+    }
+
+    button {
+        padding: 10px 25px;
+        border: none;
+        border-radius: 8px;
+        background: #28a745;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #218838;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="card">
+    <div class="check">✔</div>
+
+    <h1>Thank You!</h1>
+
+    <p>Your response has been submitted successfully.</p>
+
+    <form action="/Main" method="get">
+        <button type="submit">Return to Home</button>
+    </form>
+</div>
+
+</body>
+</html>
